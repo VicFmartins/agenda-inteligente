@@ -32,18 +32,18 @@ O direcionamento do projeto aponta para:
 
 ```text
 .
-├── AgendaInteligente.Web.sln
-├── AgendaInteligente.Web.csproj
-├── Program.cs
-├── appsettings.json
-├── Components
-│   ├── App.razor
-│   ├── Routes.razor
-│   ├── Layout
-│   └── Pages
-└── wwwroot
-    ├── app.css
-    └── bootstrap
+|- AgendaInteligente.Web.sln
+|- AgendaInteligente.Web.csproj
+|- Program.cs
+|- appsettings.json
+|- Components
+|  |- App.razor
+|  |- Routes.razor
+|  |- Layout
+|  `- Pages
+`- wwwroot
+   |- app.css
+   `- bootstrap
 ```
 
 ## Arquitetura atual
