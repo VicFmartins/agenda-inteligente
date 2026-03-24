@@ -1,0 +1,104 @@
+@page "/arquitetura"
+
+<PageTitle>Arquitetura</PageTitle>
+
+<div class="page-header">
+    <p class="tag">Tecnico</p>
+    <h1>Arquitetura atual do projeto</h1>
+    <p class="lead">
+        A base esta simples de proposito: poucos arquivos, responsabilidades claras
+        e espaco para crescer sem carregar complexidade antes da hora.
+    </p>
+</div>
+
+<section class="architecture-grid">
+    <div class="panel">
+        <h2>Camada de entrada</h2>
+        <p><strong>Program.cs</strong> configura o pipeline HTTP, HTTPS, arquivos estaticos e Razor Components interativos.</p>
+    </div>
+    <div class="panel">
+        <h2>Composicao da aplicacao</h2>
+        <p><strong>App.razor</strong> concentra a estrutura HTML base e os assets globais da aplicacao.</p>
+    </div>
+    <div class="panel">
+        <h2>Roteamento</h2>
+        <p><strong>Routes.razor</strong> define como as paginas sao resolvidas dentro do app.</p>
+    </div>
+    <div class="panel">
+        <h2>Layout</h2>
+        <p><strong>Components/Layout</strong> centraliza shell visual, navegacao e experiencia compartilhada.</p>
+    </div>
+    <div class="panel">
+        <h2>Paginas</h2>
+        <p><strong>Components/Pages</strong> agrupa as views atuais e facilita evolucao por contexto funcional.</p>
+    </div>
+    <div class="panel">
+        <h2>Assets</h2>
+        <p><strong>wwwroot</strong> mantem CSS e arquivos estaticos usados pelo frontend.</p>
+    </div>
+</section>
+
+<section class="notes">
+    <div class="panel">
+        <h2>Por que esta base e boa para portfolio</h2>
+        <ul>
+            <li>Mostra clareza estrutural em .NET 8</li>
+            <li>Evita excesso de camadas antes do dominio existir</li>
+            <li>Explica o caminho de evolucao do produto</li>
+        </ul>
+    </div>
+    <div class="panel">
+        <h2>Proximas decisoes recomendadas</h2>
+        <ul>
+            <li>Adicionar camada de dominio para compromissos</li>
+            <li>Introduzir persistencia com EF Core</li>
+            <li>Criar testes automatizados e seed local</li>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .page-header {
+        margin-bottom: 2rem;
+    }
+
+    .tag {
+        margin: 0 0 0.75rem;
+        color: #1d4ed8;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .lead {
+        max-width: 65ch;
+        color: #334155;
+    }
+
+    .architecture-grid,
+    .notes {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-bottom: 1rem;
+    }
+
+    .panel {
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 20px;
+        padding: 1.25rem;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    h2 {
+        margin-bottom: 0.6rem;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 1.1rem;
+        color: #334155;
+    }
+</style>

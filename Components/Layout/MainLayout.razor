@@ -1,0 +1,27 @@
+@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <div>
+                <p class="eyebrow">Agenda Inteligente</p>
+                <strong>Base web em Blazor pronta para evolucao</strong>
+            </div>
+            <a href="https://learn.microsoft.com/aspnet/core/blazor/" target="_blank" rel="noreferrer">Documentacao Blazor</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    Ocorreu um erro inesperado.
+    <a href="" class="reload">Recarregar</a>
+    <a class="dismiss">🗙</a>
+</div>
